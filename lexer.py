@@ -11,6 +11,7 @@ keywords = {
   'e' : 'TO_FOR',
   'ee' : 'BREAK_FOR',
   'speaknow' : 'PRINT',
+
 }
 
 
@@ -46,7 +47,8 @@ t_wonderstruck = r'\".*?\"'
 
 # Expresiones regulares para palabras reservadas con funciones
 def t_PRINT(t): r'speaknow'; return t
-
+def t_IF(t): r'loverera'; return t
+def t_ELSE(t): r'repera'; return t
 
 
 def t_ID(t):
@@ -77,8 +79,13 @@ def t_error(t):
 lexer = lex.lex()
 
 data = '''
-A = speaknow(3) + 4 * 10.4
-  + -20 *2
+factorial2 (number: thpage) : thpage{
+    loverera number == 0 {
+    hi 1
+  } repera {
+    hi number * factorial2(number - 1)
+  }
+} imtheproblem
 '''
 
 lexer.input(data)
