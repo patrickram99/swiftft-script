@@ -1,0 +1,7 @@
+factorial2 (number: thpage) : thpage{
+    loverera number == 0 {
+    hi 1
+  } repera {
+    hi number * factorial2(number - 1)
+  }
+} imtheproblem

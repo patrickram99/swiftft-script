@@ -1,0 +1,7 @@
+isme factorial1 (number: thpage) : thpage{
+  enchanted total = 0 : thpage
+  me 1 e number{
+  total *= e
+}
+  hi total
+} imtheproblem
