@@ -1,57 +1,57 @@
-P ::= AS
-P ::= CS
-P ::= IS
+P -> AS
+P -> CS
+P -> IS
 
-IS ::= while( CE ) { E }
-IS ::= for( CE ) { E }
-
-
-CS ::= loverera( CE ) { E } CSELIF
-CSELIF ::= ''
-CSELIF ::= CSELSE
-CSELIF ::= redera( CE ) { E } CSELSE
-CSELSE ::= repera { E }
-
-CE ::= E CEX
-CEX ::= == E 
-CEX ::= != E
-CEX ::= < E
-CEX ::= > E
+IS -> while( CE ) { E }
+IS -> for( CE ) { E }
 
 
-AS ::= enchanted identificador X
-X ::= = E : TY
-X ::= : TY
+CS -> loverera( CE ) { E } CSELIF
+CSELIF -> ''
+CSELIF -> CSELSE
+CSELIF -> redera( CE ) { E } CSELSE
+CSELSE -> repera { E }
 
-TY ::= thpage
-TY ::= wonderstruck
-TY ::= twenty
-TY ::= meetYou
-
-E ::= P
-E ::= T E'
-E' ::= + T E'
-E' ::= - T E'
-E' ::= && T E'
-E' ::= || T E'
+CE -> E CEX
+CEX -> == E 
+CEX -> != E
+CEX -> < E
+CEX -> > E
 
 
-E' ::= ''
-T ::= F T'
-T' ::= * F T'
-T' ::= / F T'
-T' ::= ''
+AS -> enchanted identificador X
+X -> = E : TY
+X -> : TY
 
-F ::= FX FF
-FF ::= ''
-FF ::= newLINE P
+TY -> thpage
+TY -> wonderstruck
+TY -> twenty
+TY -> meetYou
 
-FX ::= ( E )
-FX ::= identificador
-FX ::= numeral
-FX ::= type_bool 
-FX ::= " string "
+E -> P
+E -> T E'
+E' -> + T E'
+E' -> - T E'
+E' -> && T E'
+E' -> || T E'
 
-type_bool ::= SparksFly
-type_bool ::= BadBlood
+
+E' -> ''
+T -> F T'
+T' -> * F T'
+T' -> / F T'
+T' -> ''
+
+F -> FX FF
+FF -> ''
+FF -> newLINE P
+
+FX -> ( E )
+FX -> identificador
+FX -> numeral
+FX -> type_bool 
+FX -> " string "
+
+type_bool -> SparksFly
+type_bool -> BadBlood
 
