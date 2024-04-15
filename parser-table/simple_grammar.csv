@@ -1,0 +1,5 @@
+,int,times,plus,lpar,rpar,$
+E,T X,,,T X,,
+X,,,plus E,,e,e
+T,int Y,,,lpar E rpar,,
+Y,,times T,e,,e,e
