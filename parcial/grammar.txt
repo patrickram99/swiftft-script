@@ -1,0 +1,8 @@
+E -> T EX
+EX -> + T EX
+EX -> nulo
+T -> F TX
+TX -> * F TX
+TX -> nulo
+F -> ( E )
+F -> id

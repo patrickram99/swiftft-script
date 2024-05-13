@@ -1,0 +1,185 @@
+%package list
+\documentclass{article}
+\usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+%\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{array}
+%\usepackage{multicol}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+\usepackage{natbib}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{multirow}
+\usepackage[T1]{fontenc}
+\usepackage{imakeidx}
+% Imagenes de costado
+\usepackage{wrapfig}
+\usepackage{graphicx}
+
+% Modificar URLs
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Source Code}
+
+% codigo fuente
+\usepackage{listings}
+\usepackage{color, colortbl}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{codebackground}{rgb}{0.95, 0.95, 0.92}
+\definecolor{tablebackground}{rgb}{0.0, 0.45, 0.63}
+\lstset{frame=tb,
+	language=bash,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+	backgroundcolor= \color{codebackground},
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\csemail}{vmachacaa@ulasalle.edu.pe}
+\newcommand{\csdocente}{Ph.D. Vicente Enrique Machaca Arceda}
+\newcommand{\cscurso}{Compiladores}
+\newcommand{\csuniversidad}{Universidad La Salle}
+\newcommand{\csescuela}{Escuela Profesional de Ingeniería de Software}
+\newcommand{\cspracnr}{01}
+\newcommand{\cstema}{Instalación Debian}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[english,spanish]{babel}
+\usepackage[utf8]{inputenc}
+\AtBeginDocument{\selectlanguage{spanish}}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla} %esto no funciona cuando se usa babel
+\AtBeginDocument{%
+	\renewcommand\tablename{Tabla}
+}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{30pt}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{logo_ulasalle (1).png}}}
+\fancyhead[C]{}
+\fancyhead[R]{\fontsize{7}{7}\selectfont	\csuniversidad \\ \csescuela \\ \textbf{\cscurso} }
+\fancyfoot[L]{}
+\fancyfoot[C]{Sistemas Operativos}
+\fancyfoot[R]{Página \thepage}
+
+
+
+\begin{document}
+
+	\vspace*{10px}
+	
+	\begin{center}	
+		\fontsize{17}{17} \textbf{ Examen Parcial	}
+	\end{center}
+	%\centerline{\textbf{\underline{\Large Título: Informe de revisión del estado del arte}}}
+	%\vspace*{0.5cm}
+	
+
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[h]
+	\begin{tabular}{|x{4.7cm}|x{4.8cm}|x{4.8cm}|}
+		\hline 
+		\textbf{DOCENTE} & \textbf{CARRERA}  & \textbf{CURSO}   \\
+		\hline 
+		\csdocente & \csescuela & \cscurso    \\
+		\hline 
+	\end{tabular}
+\end{table}	
+
+\renewcommand{\arraystretch}{1} 
+	\section*{Presentado por: Patrick Andres Ramirez Santos}
+ 
+	\tableofcontents
+
+
+	
+
+\newpage
+
+\section{Introduccion}
+
+        \begin{minted}{bash}
+        $ su rooot
+        $ apt install sudo
+        $ sudo apt install git vim neovim openjdk-17-jdk build-essentials -y
+        $ dpkg -l git vim openjdk-17-jdk gcc g++
+        \end{minted}
+
+\section[short]{Especificaion Léxica}
+
+%\section{Source Code}
+%\begin{code}
+%	\captionof{listing}{E3/mensaje.c}
+%	\inputminted{c}{../E3/mensaje.c}
+%\end{code}
+
+%\section{Capturas}
+%\begin{figure}[h]
+%\caption{Compilación y ejecución del ejercicio 3 con MakeFile}
+%\centering
+%\includegraphics[scale=0.3,trim={0 0 20cm 19cm},clip]{e3-out.png}
+%\end{figure}
+
+%\section{Cuadrilla Imagenes}
+%    \begin{tabular}{cc}
+%        \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/sublime.png} & \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/vscode.png} \\
+%        Sublime & VS Code \\
+%        \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/notepad.png} & \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/vim.png} \\
+%        Notepad++ & Vim \\
+%    \end{tabular}
+
+	%\clearpage
+	%\bibliographystyle{apalike}
+	%\bibliographystyle{IEEEtranN}
+	%\bibliography{bibliography}
+		
+
+\renewcommand{\listlistingname}{Indice Source Code}
+\listoflistings
+\addcontentsline{toc}{section}{\listlistingname}
+
+\renewcommand{\listfigurename}{Indice de Capturas de Pantalla}
+\listoffigures 
+\addcontentsline{toc}{section}{\listfigurename} 
+
+\end{document}

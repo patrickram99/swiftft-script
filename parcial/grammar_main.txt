@@ -1,0 +1,57 @@
+P -> AS
+P -> CS
+P -> IS
+
+IS -> while( CE ) { E }
+IS -> for( CE ) { E }
+
+
+CS -> loverera( CE ) { E } CSELIF
+CSELIF -> nulo
+CSELIF -> CSELSE
+CSELIF -> redera( CE ) { E } CSELSE
+CSELSE -> repera { E }
+
+CE -> E CEX
+CEX -> == E 
+CEX -> != E
+CEX -> < E
+CEX -> > E
+
+
+AS -> enchanted identificador X
+X -> = E : TY
+X -> : TY
+
+TY -> thpage
+TY -> wonderstruck
+TY -> twenty
+TY -> meetYou
+
+E -> P
+E -> T E'
+E' -> + T E'
+E' -> - T E'
+E' -> && T E'
+E' -> || T E'
+
+
+E' -> nulo
+T -> F T'
+T' -> * F T'
+T' -> / F T'
+T' -> nulo
+
+F -> FX FF
+FF -> nulo
+FF -> newLINE P
+
+FX -> ( E )
+FX -> identificador
+FX -> numeral
+FX -> type_bool 
+FX -> comilla string comilla
+
+type_bool -> SparksFly
+type_bool -> BadBlood
+
