@@ -1,0 +1,80 @@
+MAIN -> BLOQUE P
+MAIN -> nulo
+P -> nulo
+
+BLOQUE -> enchanted identificador X newLINE MAIN 
+BLOQUE -> CS newLINE MAIN 
+BLOQUE -> IS newLINE MAIN 
+BLOQUE -> FUN newLINE MAIN 
+
+FUN -> isme fun( PAR ) { FE } imtheproblem
+FE -> E
+FE -> hi E
+newLINE -> nulo
+
+PAR -> identificador : TY LP
+LP -> nulo
+LP -> , PAR
+
+IS -> while( CE ) { E }
+IS -> for( CE ) { E }
+
+
+CS -> loverera( CE ) { E } CSELIF
+
+CSELIF -> nulo
+CSELIF -> CSELSE
+CSELIF -> redera( CE ) { E } CSELSE
+CSELSE -> repera { E }
+
+CE -> E CEX
+CEX -> nulo
+CEX -> == E 
+CEX -> != E
+CEX -> < E
+CEX -> > E
+
+
+X -> = E : TY
+X -> : TY
+
+TY -> thpage
+TY -> wonderstruck
+TY -> twenty
+TY -> meetYou
+
+E -> speaknow(com string com)
+E -> T EX
+EX -> = T EX
+EX -> + T EX
+EX -> - T EX
+EX -> && T EX
+EX -> || T EX
+
+
+EX -> nulo
+T -> F TX
+T -> fun( PD )
+PD -> nulo
+PD -> identificador PDF
+PDF -> nulo
+PDF -> , identificador 
+
+TX -> * F TX
+TX -> / F TX
+TX -> nulo
+
+F -> FX FF
+FF -> nulo
+
+FX -> ( E )
+FX -> identificador
+FX -> numeral
+FX -> type_bool 
+FX -> com string com
+
+type_bool -> SparksFly
+type_bool -> BadBlood
+
+
+
